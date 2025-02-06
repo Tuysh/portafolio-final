@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pequeño Portafolio">
+  <title>Portafolio - Maclovio Morales Angel</title>
+  <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="font-['Inter'] bg-gray-50">
+  <!-- Barra de Navegación -->
+  <!-- 
+  ¿Por qué le pongo estos comentarios?...
+  Para no pederme, entre tanto HTML
+  -->
+  <nav class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50 animate-fade-in">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-2xl font-semibold text-gray-800">Tuyshy</a>
+        <div class="hidden md:flex space-x-8">
+          <a href="#work" class="text-gray-600 hover:text-gray-900 transition">Trabajo</a>
+          <a href="#about" class="text-gray-600 hover:text-gray-900 transition">Sobre mí</a>
+          <a href="#skills" class="text-gray-600 hover:text-gray-900 transition">Habilidades
+            <a href="#contact" class="text-gray-600 hover:text-gray-900 transition">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Inicio -->
+
+  <section class="pt-32 pb-20 px-6">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in-up delay-100">
+        Diseño & Desarrollo Web
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 animate-fade-in-up delay-300">
+        Creando experiencias digitales memorables
+      </p>
+      <a href="#work"
+        class="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition animate-fade-in-up delay-500">Ver
+        proyectos</a>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+
+  <section id="work" class="py-20 bg-white px-6">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center animate-fade-in">
+        Proyectos Destacados
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="proyectos">
+        <template id="proyecto">
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl animate-fade-in-up delay-100 hover:scale-[1.02]">
+            <img src="" alt="Proyecto"
+              class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105" />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-xl font-semibold text-white mb-2">Pardalis</h3>
+
+              <div class="flex items-center text-sm text-gray-200 mb-3">
+                <i class="fas fa-user-tie mr-2"></i>
+                <span id="rol">Líder Técnico</span>
+              </div>
+
+              <div class="flex flex-wrap gap-2 mb-4" id="stack"></div>
+
+              <button class="w-full bg-white text-gray-900 py-2 rounded-lg hover:bg-gray-100 transition">
+                Ver detalles
+              </button>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mi -->
+
+  <section id="about" class="py-20 px-6">
+    <div class="container mx-auto max-w-4xl">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/3 animate-slide-in-left">
+          <img src="img/profile.jpg" alt="Perfil"
+            class="rounded-full shadow-lg w-full hover:shadow-xl transition-shadow duration-300" />
+        </div>
+
+        <div class="md:w-2/3 animate-slide-in-right">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Desarrollo con Propósito
+          </h2>
+
+          <!-- Bio -->
+          <p class="text-gray-600 mb-8 leading-relaxed">
+            Desarrollador Full Stack apasionado por crear soluciones elegantes
+            y eficientes. Mi viaje comenzó con C, aprendiendo fundamentos,
+            pero fue
+            <span class="font-semibold text-gray-800">Go</span> el lenguaje
+            que capturó mi interés y se convirtió en mi herramienta principal
+            para backend.
+          </p>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="space-y-4 animate-fade-in-up delay-200">
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Experiencia
+              </h3>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-gray-800 rounded-full mt-2 mr-3"></div>
+                  <span>2 años con PHP y POO</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-gray-800 rounded-full mt-2 mr-3"></div>
+                  <span>Full Stack con Go + React</span>
+                </li>
+                <li class="flex items-start">
+                  <div class="w-2 h-2 bg-gray-800 rounded-full mt-2 mr-3"></div>
+                  <span>Diseño de bases de datos SQL</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-6 animate-fade-in-up delay-300">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Especialización
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <div class="bg-gray-100 px-3 py-1 rounded-full text-sm flex items-center">
+                    <i class="fab fa-golang text-blue-500 mr-2"></i>
+                    Backend con Go
+                  </div>
+                  <div class="bg-gray-100 px-3 py-1 rounded-full text-sm flex items-center">
+                    <i class="fas fa-database text-green-500 mr-2"></i>
+                    Arquitectura DB
+                  </div>
+                  <div class="bg-gray-100 px-3 py-1 rounded-full text-sm flex items-center">
+                    <i class="fab fa-react text-blue-400 mr-2"></i>
+                    Frontend Moderno
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Aprendiendo
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                  <div class="bg-blue-100 px-3 py-1 rounded-full text-sm text-blue-800">
+                    TypeScript
+                  </div>
+                  <div class="bg-blue-100 px-3 py-1 rounded-full text-sm text-blue-800">
+                    Best Practices Go
+                  </div>
+                  <div class="bg-blue-100 px-3 py-1 rounded-full text-sm text-blue-800">
+                    Patrones de Diseño
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-200 animate-fade-in-up delay-400">
+            <h3 class="text-xl font-semibold text-gray-800 mb-3">
+              Proyecto Destacado
+            </h3>
+            <p class="text-gray-600">
+              Lideré el desarrollo de
+              <span class="font-semibold">Pardalis</span>, implementando un
+              sistema completo desde diseño de base de datos hasta despliegue
+              final, utilizando Go en backend y React en frontend.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+
+  <section id="skills" class="py-20 bg-gray-50 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center animate-fade-in">
+        Mis Habilidades
+      </h2>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in">
+        <button data-tab="frontend"
+          class="skill-tab active px-6 py-2 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition">
+          Front End
+        </button>
+        <button data-tab="backend"
+          class="skill-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+          Back End
+        </button>
+        <button data-tab="databases"
+          class="skill-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+          Bases de Datos
+        </button>
+        <button data-tab="devops"
+          class="skill-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+          DevOps
+        </button>
+        <button data-tab="otros"
+          class="skill-tab px-6 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+          Otros
+        </button>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 animate-fade-in-up">
+        <div id="frontend" class="skill-content active">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Front End</h3>
+          <div class="space-y-6">
+            <!-- HTML & CSS -->
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                HTML5 & CSS3
+              </h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Frameworks: Tailwind CSS, SASS</li>
+                <li>Diseño Responsivo</li>
+                <li>Bootstrap (experiencia previa)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                JavaScript/TypeScript
+              </h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>React (Principal)</li>
+                <li>Next.js</li>
+                <li>Svelte</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="backend" class="skill-content hidden">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">Back End</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                Go (Lenguaje principal)
+              </h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Gorilla Mux</li>
+                <li>Gin</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                PHP & Frameworks
+              </h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>POO</li>
+                <li>Laravel</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                Express.js
+              </h4>
+              <p class="text-gray-600">
+                Experiencia en desarrollo de APIs RESTful.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="databases" class="skill-content hidden">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+            Bases de Datos
+          </h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                SQL (MySQL, MariaDB)
+              </h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Diseño (3FN)</li>
+                <li>Stored Procedures</li>
+                <li>Views</li>
+                <li>Consultas Complejas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="devops" class="skill-content hidden">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+            DevOps & Herramientas
+          </h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                Control de Versiones
+              </h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Git</li>
+                <li>Bash (Básico)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium text-gray-800 mb-3">
+                Sistemas Operativos
+              </h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Linux</li>
+                <li>Windows</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="otros" class="skill-content hidden">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+            Otros Lenguajes
+          </h3>
+          <div class="space-y-6">
+            <ul class="list-disc list-inside text-gray-600 space-y-2">
+              <li>Java</li>
+              <li>Dart</li>
+              <li>Python</li>
+              <li>Ruby</li>
+              <li>C (Fundamentos)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+
+  <section id="contact" class="py-20 bg-gray-100 px-6">
+    <div class="container mx-auto max-w-4xl animate-fade-in">
+      <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+        Contáctame
+      </h2>
+      <form class="space-y-6">
+        <div class="animate-fade-in-up delay-150">
+          <label class="block text-gray-700 mb-2" for="nombre">Nombre</label>
+          <input type="text"
+            class="w-full px-4 py-2 rounded-lg border border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 transition" id="nombre" name="nombre"/>
+        </div>
+        <div class="animate-fade-in-up delay-450">
+          <label class="block text-gray-700 mb-2" for="mansaje">Mensaje</label>
+          <textarea rows="4"
+            class="w-full px-4 py-2 rounded-lg border border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 transition" id="mensaje" name="mensaje"></textarea>
+        </div>
+        <button
+          class="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition animate-fade-in-up delay-600">
+          Enviar correo
+        </button>
+      </form>
+      <a href="mailto:angelmaclovio@yahoo.com" id="correo" style="display: none;">Correo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="bg-gray-900 text-white py-8 animate-fade-in-up delay-700">
+    <div class="container mx-auto px-6 text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-github"></i></a>
+        <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="text-gray-400">&copy; 2025 Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Alguien leera el código? Espero y que no D:-->
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
