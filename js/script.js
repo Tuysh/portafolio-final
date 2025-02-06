@@ -73,26 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const proyecto of proyectosDesarrollados) {
       const clone = proyectoTemplate.content.cloneNode(true)
 
-      const h3 = clone.querySelector('h3')
-      const img = clone.querySelector('img')
-      const rol = clone.querySelector('#rol')
-      const stack = clone.querySelector('#stack')
-      const button = clone.querySelector('button')
-
-      h3.textContent = proyecto.nombre
-      rol.textContent = proyecto.rol
-      img.setAttribute('src', proyecto.links.imagen)
-
-      if (proyecto.links.codigoFuente === undefined) {
-        button.style.display = 'none'
-      }
+      clone.querySelector('h3').textContent = proyecto.nombre
+      clone.querySelector('img').setAttribute('src', proyecto.links.imagen)
+      clone.querySelector('#rol').textContent = proyecto.rol
+      clone.querySelector('.ver-detalles').addEventListener('click', () => abrirModal(proyecto))
 
       proyecto.stack.forEach(e => {
         const key = e.toLowerCase().trim()
         const { prefix, icon, color } = iconMapping[key] || { prefix: 'fas', icon: 'fa-code', color: 'text-gray-400' }
         const html = `<div class="bg-gray-800/50 px-3 py-1 rounded-full text-sm text-white flex items-center"><i class="${prefix} ${icon} ${color} mr-2"></i> ${e}</div>`
 
-        stack.innerHTML += html
+        clone.querySelector('#stack').innerHTML += html
       })
 
       proyectos.appendChild(clone)
@@ -143,5 +134,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mailto.setAttribute('href', `mailto:angelmaclovio@yahoo.com?subject=${dataForm.get('nombre')}&body=${dataForm.get('mensaje')}`)
     mailto.click()
+  })
+
+  const modal = document.getElementById('project-modal')
+  const cerrarModalBtn = modal.querySelector('.cerrar-modal')
+
+  function abrirModal (proyecto) {
+    modal.querySelector('.modal-nombre').textContent = proyecto.nombre
+    modal.querySelector('.modal-rol').textContent = proyecto.rol
+    modal.querySelector('.modal-stack').innerHTML = proyecto.stack.map(tech => `
+            <div class="bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-800">
+                ${tech}
+            </div>
+        `).join('')
+    modal.querySelector('.modal-descripcion').textContent = proyecto.descripcion
+    modal.querySelector('.modal-links').innerHTML = proyecto.links.codigoFuente
+      ? `
+            <a href="${proyecto.links.codigoFuente}" target="_blank" class="text-blue-500 hover:text-blue-700">
+                <i class="fas fa-code mr-2"></i>Código Fuente
+            </a>
+        `
+      : ''
+    modal.classList.remove('hidden')
+    modal.classList.add('flex')
+  }
+
+  cerrarModalBtn.addEventListener('click', () => modal.classList.add('hidden'))
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.add('hidden')
   })
 })
