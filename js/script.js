@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       nombre: 'Pardalis: Plataforma de Aprendizaje de Inglés',
       rol: 'Líder de Proyecto & Desarrollador Principal',
-      stack: ['React', 'TailwindCSS', 'MySQL', 'Golang', 'Gin'],
+      stack: ['Svelte', 'TailwindCSS', 'MySQL', 'Golang', 'Gorilla Mux'],
       descripcion: 'Desarrollo de una plataforma completa para el aprendizaje de inglés, con gestión de usuarios, sistema de progreso y logros, panel administrativo y diseño responsivo.',
       links: {
         codigoFuente: 'https://gitlab.com/pardalis',
@@ -50,6 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
         codigoFuente: 'https://codeberg.org/HeNew4/Paket-App',
         imagen: 'img/proyectos/paket.webp'
       }
+    },
+    {
+      nombre: 'Diagram Web',
+      rol: 'Desarrollador',
+      stack: ['TypeScript', 'React', 'TailwindCSS'],
+      descripcion: 'Herramienta para crear diagramas de física interactivos, diseñada para facilitar la visualización de conceptos fundamentales en cinetica, estatica. (Todavia en desarrollo)',
+      links: {
+        imagen: 'img/proyectos/diagramas.webp'
+      }
     }
   ]
 
@@ -63,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     css: { prefix: 'fab', icon: 'fa-css3-alt', color: 'text-blue-500' },
     'javascript (vanilla)': { prefix: 'fab', icon: 'fa-js', color: 'text-yellow-500' },
     javascript: { prefix: 'fab', icon: 'fa-js', color: 'text-yellow-500' },
+    typescript: { prefix: 'fab', icon: 'fa-js', color: 'text-blue-500' },
     python: { prefix: 'fab', icon: 'fa-python', color: 'text-yellow-500' }
   }
 
